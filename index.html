@@ -34,8 +34,8 @@
                 <span class="line line3"></span>
               </div>  
             <div class="menu-items">
-              <li><a href="#"class="cerrar1">Home</a></li>
-              <li><a href="#"class="cerrar2">Products</a></li>
+              <li><a href="#home"class="cerrar1">Home</a></li>
+              <li><a href="#product"class="cerrar2">Products</a></li>
 
             </div>
           </div>
@@ -43,14 +43,14 @@
       </nav>
 
     <div class="contenedor">
-        <div class="top">
+        <div class="top" id="home">
             <div class="gridtop">
                 <div class="promotion">
                     <h1>New Sweatshirt
                         COLLECTIONS 2022</h1>
                     <p>Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern design.</p>
                     <p>$14.00</p>
-                    <div><button class="boton1">1</button><button class="boton2">2</button></div>
+                    <div class="buttoms_promo"><button class="boton1">Discover</button><button class="boton2">ADD TO CART</button></div>
                 </div>
                 <div class="imagpromotion">
                     <img src="./featured2.png" alt="Promocion">
@@ -59,12 +59,12 @@
 
             </div>
         </div>
-        <div class="centermenu">
-            <div class="filters">
-                <div class="all barra" data-filter="all"><p>Show all</p><br><p>Show all product</p></div>
-                <div class="hoodies barra" data-filter="hoodies"><p>Hoodies</p><br><p>1 products</p></div>
-                <div class="shirts  barra" data-filter="shirts"><p>Shirts</p><br><p>1 products</p></div>
-                <div class="sweatshirts"data-filter="sweatshirts"><p>Sweatshirts</p><br><p>1 products</p></div>
+        <div class="centermenu" id="product">
+            <div class="filters" >
+                <div class="all barra" data-filter="all"><p class="mediano">Show all</p><p class="mini">Show all product</p></div>
+                <div class="hoodies barra" data-filter="hoodies"><p class="mediano">Hoodies</p><p class="mini">1 products</p></div>
+                <div class="shirts  barra" data-filter="shirts"><p class="mediano">Shirts</p><p class="mini">1 products</p></div>
+                <div class="sweatshirts barra1"data-filter="sweatshirts"><p class="mediano">Sweatshirts</p><p class="mini">1 products</p></div>
                
             </div>
         </div>
@@ -73,29 +73,31 @@
         </div>
     </div>
     <footer>
+        <div class="foot">
         <div>
-            <p>Our Information</p>
-            <p>Lima-Peru</p>
+            <p class="mediano">Our Information</p>
+            <p class="peque">Lima-Peru</p>
         </div>
         <div>
-            <p>About Us</p>
-            <p>Support Center</p>
-            <p>Customer Support</p>
-            <p>About Us</p>
-            <p>Copy Right</p>
+            <p class="mediano">About Us</p>
+            <p class="peque">Support Center</p>
+            <p class="peque">Customer Support</p>
+            <p class="peque">About Us</p>
+            <p class="peque">Copy Right</p>
         </div>
         <div>
-            <p>Product</p>
-            <p>Hoodies</p>
-            <p>Shirts</p>
-            <p>Sweatshirts</p>
+            <p class="mediano">Product</p>
+            <p class="peque">Hoodies</p>
+            <p class="peque">Shirts</p>
+            <p class="peque">Sweatshirts</p>
         </div>
         <div>
-            <p>Social</p>
+            <p class="mediano">Social</p>
             <div>
                 abc
             </div>
         </div>
+    </div>
     </footer>
     <script type="module" src="main.js" ></script>
     <script type="module" src="lista.js"></script>
