@@ -101,3 +101,9 @@ document.querySelector('.sweatshirts.barra1').addEventListener('click', function
 
 
 let collection = [];
+document.querySelector('.oscuroimg').addEventListener('click', function (event) {
+    console.log('test')
+    document.querySelector('body').classList.toggle('dark');
+    
+
+})
