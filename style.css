@@ -127,6 +127,7 @@ body {
 .gridtop{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b"
 }
 .filters{
     margin-top: 40px;
@@ -175,6 +176,7 @@ gap: 20px;}
     align-items: center;
     gap: 40px;
     margin-bottom: 100px;
+    grid-area: a;
 }
 .productosjs{
     display: grid;
@@ -225,7 +227,7 @@ align-items: center;
 justify-content: center;
 justify-items: center;
 display: flex;
-
+grid-area: b;
 }
 
 
@@ -286,7 +288,34 @@ justify-content: center;
 
 
 @media (max-width:600px){
-    .container {
+  .gridtop{
+    display: grid;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "b"
+"a";}
+  
+.promotion{
+    align-self: center;
+  }
+    .mini{
+    font-size: 7px;
+  }
+  
+  .peque{
+    font-size: 11px;
+  }
+  
+  .mediano{
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .grande{
+    font-size: 18px;
+  }
+  
+
+  .container {
 
         width: 100%;
         margin: auto;
