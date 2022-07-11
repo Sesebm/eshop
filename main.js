@@ -9,7 +9,7 @@ function mostrarelementos() {
                  <button class="btn_agregar" data-id="${list[i].id}">+</button>
                  <div class="info_tarjeta">
                  
-                 <p>${list[i].titulo} </p>
+                 <p class="grande">${list[i].titulo} </p>
                  </div>
                      
         </article>`;
