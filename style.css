@@ -1,8 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
+:root{
+  --fondo: #F7F5F2;
+  --barra: #DFDFDE;
+  --primario: #F56D91;
+  --secundario: #8D8DAA;
+  --letras: black;
+}
 body {
   font-family: "Poppins", sans-serif;
+  color: var(--letras);
+  background-color: var(--fondo);
 }
 
 .container {
@@ -39,7 +47,7 @@ body {
 
 .navbar .nav-container a {
   text-decoration: none;
-  color: #0e2431;
+  color: var(--letras);
   font-weight: 500;
   font-size: 1.2rem;
   padding: 0.7rem;
@@ -53,8 +61,9 @@ body {
   display: block;
   position: fixed;
   height: 60px;
-  background-color: azure;
+  background-color: var(--barra);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  z-index: 5;
 }
 
 .nav-container .checkbox {
@@ -77,7 +86,7 @@ body {
 .logo {
 
   font-size: 1.2rem;
-  color: #0e2431;
+  color: var(--letras);
 }
 
 .oscuro {
@@ -85,7 +94,7 @@ body {
   top: 20px;
   right: 40px;
   font-size: 1.2rem;
-  color: #0e2431;
+  color: var(--letras);
 }
 
 .carro {
@@ -93,7 +102,7 @@ body {
   top: 20px;
   right: 60px;
   font-size: 1.2rem;
-  color: #0e2431;
+  color: var(--letras);
 }
 
 
@@ -148,7 +157,7 @@ body {
 
 .barra {
 
-  border-right: 3px solid cornflowerblue;
+  border-right: 3px solid var(--secundario);
   padding-right: 10px;
 }
 
@@ -156,7 +165,7 @@ footer {
 
   padding: 20px;
 
-  background-color: #757777;
+  background-color: var(--barra);
 }
 
 .foot {
@@ -198,19 +207,19 @@ footer {
 .productosjs {
   height: 400px;
   width: 280px;
-  background-color: rgb(240, 240, 240);
+  background-color: var(--fondo);
   align-items: center;
   justify-items: center;
   text-align: center;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .imagen_tarjeta {
   height: 100%;
   width: 100%;
-  background-color: rgb(228, 255, 255);
+  background-color: var(--primario);
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-top: 3ex;
@@ -233,7 +242,7 @@ footer {
 .imagpromotion {
   width: 100%;
   height: 100vh;
-  background-color: aqua;
+  background-color: var(--primario);
   align-items: center;
   justify-content: center;
   justify-items: center;
@@ -279,7 +288,7 @@ footer {
   padding: 7%;
   height: 60px;
   border-radius: 0;
-  background-color: aquamarine;
+  background-color: var(--secundario);
   border: 0px;
   cursor: pointer;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
@@ -289,7 +298,7 @@ footer {
   width: 180px;
   height: 80px;
   border-radius: 0;
-  background-color: rgb(66, 226, 173);
+  background-color: var(--primario);
   border: 0px;
   cursor: pointer;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
@@ -309,13 +318,12 @@ footer {
   .productosjs {
     height: 350px;
     width: 220px;
-    background-color: rgb(240, 240, 240);
     align-items: center;
     justify-items: center;
     text-align: center;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-  
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   }
 
   .centerproducts {

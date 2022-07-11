@@ -18,7 +18,7 @@ function mostrarelementos() {
 
 }
 mostrarelementos()
-let collection = [];
+
 let element;
 document.addEventListener("click", function (event) {
     console.log(event.target.dataset);
@@ -98,3 +98,6 @@ document.querySelector('.sweatshirts.barra1').addEventListener('click', function
             </div>`;}    showBox.innerHTML = html;
     }
 }); 
+
+
+let collection = [];
