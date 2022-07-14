@@ -237,6 +237,7 @@ document.addEventListener("click", function (event) {
         }
 
         PintarCarro()
+
         numerito();
     }
 
@@ -282,7 +283,7 @@ function PintarCarro() {
         
         <div class="unidades">
         <button class="btn_Restar" data-id="${carrito[i].id}">-</button>
-        <p>  ${carrito[i].cantidad} Units </p>
+        <p class="peque">  ${carrito[i].cantidad} Units </p>
         <button class="btn_Sumar" data-id="${carrito[i].id}">+</button>
 
         <i class="fa-solid fa-trash" data-id="${carrito[i].id}"></i>
@@ -365,5 +366,6 @@ function numerito() {
     const flotador = document.getElementById("flotador");
 
     flotador.innerHTML = `<div class="flotante">${cantidadtotal}</div>`;}
+    else flotador.innerHTML='';
 }
 numerito();
