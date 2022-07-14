@@ -289,8 +289,8 @@ function PintarCarro() {
 
         </div>
 
-        <p> Price:${carrito[i].precio}.00$</p>
-        <p> Subtotal: ${carrito[i].precio * carrito[i].cantidad}.00$</p>
+        <p class="mini"> Price:${carrito[i].precio}.00$</p>
+        <p class="mini"> Subtotal: ${carrito[i].precio * carrito[i].cantidad}.00$</p>
         </div>
 
 

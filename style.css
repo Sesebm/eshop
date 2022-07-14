@@ -710,6 +710,22 @@ justify-content: center;
   right:0;
 }
 
+.productoscarro{  
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  position:relative;
+  margin: auto;
+  height: 110px;
+  width: 90%;
+   column-gap: 10px;
+   row-gap: 40px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+ 
+}
+
 .flotante{
   position: absolute;
   top: 20px;
