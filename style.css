@@ -97,6 +97,11 @@ body {
   list-style: none;
 }
 
+.checkout{
+  padding: 6px;
+  color: var(--letras);
+  background-color: var(--primario);
+}
 .navbar .nav-container a {
   text-decoration: none;
   color: var(--letras);
