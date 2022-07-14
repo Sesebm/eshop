@@ -1,5 +1,39 @@
 import { list } from './lista.js';
 
+const listaoriginal = [
+    {
+        id: 1
+        , tipo: 'Hoodies'
+        , titulo: 'Hoodie'
+        , descripcion: 1
+        , precio: 14.00
+        , stock: 10
+        , img: './featured1.png'
+        , cantidad: 0
+    }
+    , {
+        id: 2
+        , tipo: 'Shirt'
+        , titulo: 'Shirt'
+        , descripcion: 2
+        , precio: 24.00
+        , stock: 15
+        , img: './featured2.png'
+        , cantidad: 0
+    }
+    , {
+        id: 3
+        , tipo: 'Sweatshirts'
+        , titulo: 'Sweatshirt'
+        , descripcion: 3
+        , precio: 24.00
+        , stock: 20
+        , img: './featured3.png'
+        , cantidad: 0
+    }
+    
+];
+
 window.addEventListener("load", function (event) {
     const loading = document.getElementById('load')
     console.log("'Todos los recursos terminaron de cargar!");
@@ -167,13 +201,14 @@ var carrito = [];
 document.addEventListener("click", function (event) {
     if (event.target.classList.value == "btn_agregar") {
         var existe;
-        
+
         /* Verificar que existe */
         for (let i = 0; i < carrito.length; i++) {
             if (carrito[i].id == event.target.dataset.id) {
+                if (carrito[i].cantidad >= carrito[i].stock) { alert('No hay mas stock'); return }
                 carrito[i].cantidad++;
                 existe = true;
- 
+
             }
 
         }
@@ -183,7 +218,7 @@ document.addEventListener("click", function (event) {
             for (let i = 0; i < list.length; i++) {
                 if (list[i].id == event.target.dataset.id) {
                     carrito.push(list[i]);
-                   carrito[carrito.length-1].cantidad=1;
+                    carrito[carrito.length - 1].cantidad = 1;
                 }
             }
 
@@ -202,9 +237,9 @@ document.addEventListener("click", function (event) {
             if (carrito[i].id == event.target.dataset.id) {
                 carrito[i].cantidad--;
                 if (carrito[i].cantidad == 0) {
-                carrito.splice(i, 1);
+                    carrito.splice(i, 1);
                 }
-                
+
             }
         }
 
@@ -218,16 +253,16 @@ document.addEventListener("click", function (event) {
 
 /* ELIMINAR del carro */
 document.addEventListener("click", function (event) {
- 
+
     if (event.target.classList.value == "fa-solid fa-trash") {
         let id = event.target.dataset.id;
-       
+
         for (let i = 0; i < carrito.length; i++) {
             if (carrito[i].id == event.target.dataset.id) {
                 console.log('borrado')
                 carrito[i].cantidad == 0;
                 carrito.splice(i, 1);
-                
+
             }
         }
 
@@ -241,12 +276,17 @@ document.addEventListener("click", function (event) {
 
 /* sumar del carro */
 document.addEventListener("click", function (event) {
-  
+
     if (event.target.classList.value == "btn_Sumar") {
         let id = event.target.dataset.id;
-       
+
         for (let i = 0; i < carrito.length; i++) {
             if (carrito[i].id == event.target.dataset.id) {
+                
+                    if (carrito[i].cantidad >= carrito[i].stock) { alert('No hay mas stock'); return }
+                
+
+
                 carrito[i].cantidad++;
             }
         }
@@ -259,7 +299,7 @@ document.addEventListener("click", function (event) {
 );
 
 function PintarCarro() {
-    
+
     const kart = document.getElementById("kart");
     let auxpaintcart = ''
     for (let i = 0; i < carrito.length; i++) {
@@ -268,6 +308,7 @@ function PintarCarro() {
         <div class="datoscarro">
         <div class="derechacarro">
         <p class="grande">${carrito[i].titulo} </p>
+        
         <div class="unidades">
         <button class="btn_Restar" data-id="${carrito[i].id}">-</button>
         <p>  ${carrito[i].cantidad} Units </p>
@@ -280,9 +321,9 @@ function PintarCarro() {
         <p> Price:${carrito[i].precio}.00$</p>
         <p> Subtotal: ${carrito[i].precio * carrito[i].cantidad}.00$</p>
         </div>
-        <div>
-        
-        </div>
+
+
+
         </div>
        
 </div>`;
@@ -293,30 +334,47 @@ function PintarCarro() {
     carrovacio();
 }
 
-function carrovacio(){
-        const kart = document.getElementById("kart");
-    if(kart.innerHTML.trim() == '')
-    kart.innerHTML= `    <img class="carritovacio" src="./empty-cart.png" alt=""><p>Your cart is empty</p>  
+function carrovacio() {
+    const kart = document.getElementById("kart");
+    if (kart.innerHTML.trim() == '')
+        kart.innerHTML = `    <img class="carritovacio" src="./empty-cart.png" alt=""><p>Your cart is empty</p>  
     <p>You can add items to your cart by clicking on the "+" button on the product page.</p>`;
-    preciototal()}
-    
-    
+    preciototal()
+}
+
+
 carrovacio();
 
-function preciototal(){
+function preciototal() {
     const bot = document.getElementById("preciototal");
-    let cantidadtotal=0;
-    let preciototal=0;
-    
-    for(let i = 0; i < carrito.length; i++){
-        cantidadtotal=cantidadtotal+carrito[i].cantidad;
-        preciototal+=carrito[i].cantidad*carrito[i].precio;}
-        console.log(cantidadtotal)
-    
-    
-    bot.innerHTML= `    <div class="cantidad"> <p>${cantidadtotal} Items</p> </div>
-    <div class="totalprecio"> <p class="mediano">Total Price:${preciototal}$</p> </div>`;
+    let cantidadtotal = 0;
+    let preciototal = 0;
+
+    for (let i = 0; i < carrito.length; i++) {
+        cantidadtotal = cantidadtotal + carrito[i].cantidad;
+        preciototal += carrito[i].cantidad * carrito[i].precio;
+    }
+    console.log(cantidadtotal)
+
+
+    bot.innerHTML = `    <div class="cantidad"> <p>${cantidadtotal} Items</p> </div>
+    <div class="totalprecio"> <p class="mediano">Total Price:${preciototal}$</p> </div>        <div>
+
+    </div>`
+        ;
 
 
 }
 preciototal()
+
+document.addEventListener("click", function (event) {
+    console.log (event.target.classList.value);
+    if (event.target.classList.value == "checkout") {
+            console.log ('por aca pasa');
+            
+            carrito=[];
+            
+            PintarCarro();
+    }
+}
+);

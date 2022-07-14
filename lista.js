@@ -1,4 +1,4 @@
-const list = [
+var list = [
     {
         id: 1
         , tipo: 'Hoodies'

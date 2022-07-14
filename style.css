@@ -284,7 +284,7 @@ justify-content: center;
 /* tarjetas */
 .productoscarro{  
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   position:relative;
   margin: auto;
   height: 120px;
