@@ -184,9 +184,10 @@ document.addEventListener("click", function (event) {
 
             for (let i = 0; i < list.length; i++) {
                 if (list[i].id == event.target.dataset.id) {
-                    if (list[i].cantidad >= list[i].stock) { alert('No hay mas stock'); return }
+                    
                     carrito.push(list[i]);
                     carrito[carrito.length - 1].cantidad = 1;
+                    if (list[i].cantidad >= list[i].stock) { alert('No hay mas stock'); carrito[carrito.length - 1].cantidad = 0; return }
                 }
             }
 
@@ -255,8 +256,8 @@ document.addEventListener("click", function (event) {
         for (let i = 0; i < carrito.length; i++) {
             if (carrito[i].id == event.target.dataset.id) {
                 
-                    if (carrito[i].cantidad >= carrito[i].stock) { alert('No hay mas stock'); return }
-                
+                    if (carrito[i].cantidad >= carrito[i].stock) { alert('No hay mas stock') ; return }
+                    
 
 
                 carrito[i].cantidad++;
@@ -326,7 +327,7 @@ function preciototal() {
         cantidadtotal = cantidadtotal + carrito[i].cantidad;
         preciototal += carrito[i].cantidad * carrito[i].precio;
     }
-    console.log(cantidadtotal)
+  
 
 
     bot.innerHTML = `    <div class="cantidad"> <p>${cantidadtotal} Items</p> </div>
@@ -341,9 +342,9 @@ preciototal()
 
 /* checkout */
 document.addEventListener("click", function (event) {
-    console.log (event.target.classList.value);
+    
     if (event.target.classList.value == "checkout") {
-            console.log ('por aca pasa');
+          
             for (let i = 0; i < carrito.length; i++) {
                 for (let j = 0; j < list.length; j++) { 
                     if(carrito[i].id == list[j].id){
@@ -361,7 +362,7 @@ document.addEventListener("click", function (event) {
 );
 
 function numerito() {
-    console.log()
+  
     if(cantidadtotal != 0){
     const flotador = document.getElementById("flotador");
 
