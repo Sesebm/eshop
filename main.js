@@ -1,38 +1,5 @@
 import { list } from './lista.js';
 
-const listaoriginal = [
-    {
-        id: 1
-        , tipo: 'Hoodies'
-        , titulo: 'Hoodie'
-        , descripcion: 1
-        , precio: 14.00
-        , stock: 10
-        , img: './featured1.png'
-        , cantidad: 0
-    }
-    , {
-        id: 2
-        , tipo: 'Shirt'
-        , titulo: 'Shirt'
-        , descripcion: 2
-        , precio: 24.00
-        , stock: 15
-        , img: './featured2.png'
-        , cantidad: 0
-    }
-    , {
-        id: 3
-        , tipo: 'Sweatshirts'
-        , titulo: 'Sweatshirt'
-        , descripcion: 3
-        , precio: 24.00
-        , stock: 20
-        , img: './featured3.png'
-        , cantidad: 0
-    }
-    
-];
 
 window.addEventListener("load", function (event) {
     const loading = document.getElementById('load')
@@ -47,7 +14,7 @@ window.addEventListener("load", function (event) {
 });
 
 
-
+var cantidadtotal = 0;
 /* para navbar queu se haga de color solido con scroll 
 
 window.onscroll = function() {
@@ -217,6 +184,7 @@ document.addEventListener("click", function (event) {
 
             for (let i = 0; i < list.length; i++) {
                 if (list[i].id == event.target.dataset.id) {
+                    if (list[i].cantidad >= list[i].stock) { alert('No hay mas stock'); return }
                     carrito.push(list[i]);
                     carrito[carrito.length - 1].cantidad = 1;
                 }
@@ -224,6 +192,7 @@ document.addEventListener("click", function (event) {
 
         }
         PintarCarro()
+        numerito();
     }
 }
 );
@@ -244,6 +213,7 @@ document.addEventListener("click", function (event) {
         }
 
         PintarCarro()
+        numerito();
     }
 
 }
@@ -267,6 +237,7 @@ document.addEventListener("click", function (event) {
         }
 
         PintarCarro()
+        numerito();
     }
 
 }
@@ -347,7 +318,7 @@ carrovacio();
 
 function preciototal() {
     const bot = document.getElementById("preciototal");
-    let cantidadtotal = 0;
+    cantidadtotal = 0;
     let preciototal = 0;
 
     for (let i = 0; i < carrito.length; i++) {
@@ -367,14 +338,32 @@ function preciototal() {
 }
 preciototal()
 
+/* checkout */
 document.addEventListener("click", function (event) {
     console.log (event.target.classList.value);
     if (event.target.classList.value == "checkout") {
             console.log ('por aca pasa');
-            
-            carrito=[];
-            
+            for (let i = 0; i < carrito.length; i++) {
+                for (let j = 0; j < list.length; j++) { 
+                    if(carrito[i].id == list[j].id){
+                        list[j].stock = list[j].stock-carrito[i].cantidad;
+                    }
+        
+        }}
+            carrito= [];
             PintarCarro();
+            mostrarelementos();
+            numerito();
+
     }
 }
 );
+
+function numerito() {
+    console.log()
+    if(cantidadtotal != 0){
+    const flotador = document.getElementById("flotador");
+
+    flotador.innerHTML = `<div class="flotante">${cantidadtotal}</div>`;}
+}
+numerito();

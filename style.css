@@ -55,6 +55,15 @@ body {
   color: var(--letras);
   background-color: var(--fondo);
 }
+.flotante{
+  position: absolute;
+  top: 25px;
+  right: 75px;
+  background-color: var(--primario);
+  padding: 1px 7px;
+  border-radius: 100%;
+  color: var(--letras);
+}
 
 .container {
 
@@ -699,5 +708,15 @@ justify-content: center;
 }
 .showcart{
   right:0;
+}
+
+.flotante{
+  position: absolute;
+  top: 20px;
+  right: 95px;
+  background-color: var(--primario);
+  padding: 1px 7px;
+  border-radius: 100%;
+  color: var(--letras);
 }
 }
