@@ -7,52 +7,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/9905c126e4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-
+<div class="load" id="load">
+<img src="./load.gif" alt="">
+</div>
     <nav>
         <div class="navbar">
-          <div class="container nav-container">
-              
-            <div class="logo">
-              <h1>Tienda</h1>
-            </div>
+            <div class="container nav-container" id="navbar">
 
-            <div class="oscuro" id="oscuro">
-            <img class="oscuroimg" src="./file-svg-circle-half-black-half-white-1167495.png" alt=""> 
-            </div>
+                <div class="logo">
+                    <h1>Tiendav\</h1>
+                </div>
+
+                <div class="oscuro" id="oscuro">
+                    <svg id="svg" class="oscuroimg" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0, 0, 400,400">
+                        <g id="svgg">
+                            <path id="path0"
+                                d="M186.122 0.431 C 71.166 8.831,-12.812 111.295,1.651 225.510 C 14.833 329.615,107.763 406.350,212.456 399.578 C 333.452 391.752,419.766 279.530,396.098 160.816 C 376.490 62.465,285.744 -6.849,186.122 0.431 M200.000 200.007 L 200.000 333.484 195.408 333.247 C 122.110 329.471,66.706 271.979,66.803 199.796 C 66.901 126.778,123.531 69.225,197.857 66.606 L 200.000 66.531 200.000 200.007 "
+                                stroke="none" fill-rule="evenodd"></path>
+                        </g>
+                    </svg>
+                </div>
                 <div class="carro">
-                    <img class="carroimg" src="./shopping.png" alt=""> 
-                  </div>
-                
-                
-            <input class="checkbox" type="checkbox" name="" id="" />
-              <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-              </div>  
-            <div class="menu-items">
-              <li><a href="#home"class="cerrar1">Home</a></li>
-              <li><a href="#product"class="cerrar2">Products</a></li>
+                    <svg id="svg" class="carroimg" xmlns= http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0, 0, 400,400">
+                        <g id="svgg">
+                            <path id="path0"
+                                d="M6.420 13.018 C -1.714 17.027,-2.295 30.928,5.482 35.493 C 6.895 36.323,19.863 41.641,34.299 47.309 C 56.715 56.112,60.636 57.887,61.159 59.472 C 61.496 60.493,70.040 106.469,80.146 161.642 C 90.252 216.815,98.993 262.870,99.571 263.988 C 101.810 268.318,107.004 271.094,112.866 271.094 C 117.221 271.094,117.648 268.596,109.375 291.534 C 102.018 311.934,101.551 314.108,103.599 318.424 C 105.605 322.651,108.935 324.219,115.913 324.219 C 119.192 324.219,121.875 324.359,121.875 324.531 C 121.875 324.703,120.652 326.660,119.158 328.880 C 102.387 353.802,121.458 388.281,152.013 388.281 C 182.970 388.281,201.277 353.821,183.977 328.114 L 181.356 324.219 222.414 324.219 L 263.472 324.219 262.205 325.977 C 243.203 352.353,260.843 388.213,292.849 388.270 C 324.686 388.326,343.428 351.789,324.401 326.758 L 322.471 324.219 329.790 324.216 C 342.359 324.211,348.543 316.354,343.058 307.359 C 339.792 302.003,347.285 302.344,232.890 302.344 C 150.823 302.344,129.697 302.144,129.736 301.367 C 129.763 300.830,132.158 293.887,135.059 285.938 L 140.334 271.484 239.503 271.080 C 294.046 270.858,338.748 270.594,338.840 270.494 C 338.932 270.394,340.264 269.210,341.800 267.862 C 345.671 264.462,343.301 271.239,373.083 178.423 C 402.770 85.899,401.991 88.901,397.828 83.053 C 393.992 77.666,402.998 78.383,263.281 72.351 L 136.328 66.870 133.213 68.396 C 122.517 73.636,124.096 89.956,135.575 92.806 C 137.278 93.229,190.176 95.739,253.125 98.384 C 316.074 101.030,367.947 103.266,368.398 103.355 C 368.850 103.443,360.602 130.373,350.039 163.300 C 339.490 196.181,329.314 227.909,327.425 233.807 L 323.991 244.531 223.128 244.530 L 122.266 244.530 104.403 147.070 C 94.579 93.466,86.166 47.924,85.707 45.864 C 84.021 38.302,83.588 38.051,48.227 24.197 C 14.225 10.876,11.983 10.276,6.420 13.018 M159.371 335.154 C 172.228 341.713,170.963 360.104,157.296 365.324 C 144.903 370.057,131.501 356.671,136.232 344.284 C 139.843 334.829,150.495 330.626,159.371 335.154 M301.137 335.430 C 310.668 340.609,312.231 354.225,304.173 361.873 C 293.281 372.210,275.447 363.371,276.710 348.262 C 277.711 336.294,290.430 329.612,301.137 335.430 "
+                                stroke="none" fill-rule="evenodd"></path>
+                        </g>
+                    </svg>
 
+                </div>
+
+
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <li><a href="#home" class="cerrar1">Home</a></li>
+                    <li><a href="#product" class="cerrar2">Products</a></li>
+
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
+    </nav>
+    
+    
+    <div class="cart" >
+<div class="gridcarro"></div>
+        <div class="carrotop">  
+            <br>
+            <p>My Cart</p>
+            <br>
+            <br>
+        </div>
+        <div class="carromedio" id="kart">
+        
+            
+        </div>
+        <div class="carrobottom" id="preciototal">
+            
+        
 
+        </div>
+    </div>
+
+<button>Checkout</button>
     <div class="contenedor">
         <div class="top" id="home">
             <div class="gridtop">
                 <div class="promotion">
                     <h1>New Sweatshirt
                         COLLECTIONS 2022</h1>
-                    <p>Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern design.</p>
+                    <p>Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with
+                        a modern design.</p>
                     <p>$14.00</p>
-                    <div class="buttoms_promo"><button class="boton1">Discover</button><button class="boton2">ADD TO CART</button></div>
+                    <div class="buttoms_promo"><button class="boton1" >Discover</button><button class="boton2">ADD TO
+                            CART</button></div>
                 </div>
+
                 <div class="imagpromotion">
                     <img src="./featured2.png" alt="Promocion">
                 </div>
@@ -61,46 +102,59 @@
             </div>
         </div>
         <div class="centermenu" id="product">
-            <div class="filters" >
-                <div class="all barra" data-filter="all"><p class="mediano">Show all</p><p class="mini">Show all product</p></div>
-                <div class="hoodies barra" data-filter="hoodies"><p class="mediano">Hoodies</p><p class="mini">1 products</p></div>
-                <div class="shirts  barra" data-filter="shirts"><p class="mediano">Shirts</p><p class="mini">1 products</p></div>
-                <div class="sweatshirts barra1"data-filter="sweatshirts"><p class="mediano">Sweatshirts</p><p class="mini">1 products</p></div>
-               
+            <div class="filters">
+                <div class="all barra" data-filter="all">
+                    <p class="mediano">Show all</p>
+                    <p class="mini">Show all product</p>
+                </div>
+                <div class="hoodies barra" data-filter="hoodies">
+                    <p class="mediano">Hoodies</p>
+                    <p class="mini">1 products</p>
+                </div>
+                <div class="shirts  barra" data-filter="shirts">
+                    <p class="mediano">Shirts</p>
+                    <p class="mini">1 products</p>
+                </div>
+                <div class="sweatshirts barra1" data-filter="sweatshirts">
+                    <p class="mediano">Sweatshirts</p>
+                    <p class="mini">1 products</p>
+                </div>
+
             </div>
         </div>
         <div class="centerproducts" id="showbox">
 
         </div>
+
     </div>
     <footer>
         <div class="foot">
-        <div>
-            <p class="mediano">Our Information</p>
-            <p class="peque">Lima-Peru</p>
-        </div>
-        <div>
-            <p class="mediano">About Us</p>
-            <p class="peque">Support Center</p>
-            <p class="peque">Customer Support</p>
-            <p class="peque">About Us</p>
-            <p class="peque">Copy Right</p>
-        </div>
-        <div>
-            <p class="mediano">Product</p>
-            <p class="peque">Hoodies</p>
-            <p class="peque">Shirts</p>
-            <p class="peque">Sweatshirts</p>
-        </div>
-        <div>
-            <p class="mediano">Social</p>
             <div>
-                abc
+                <p class="mediano">Our Information</p>
+                <p class="peque">Lima-Peru</p>
+            </div>
+            <div>
+                <p class="mediano">About Us</p>
+                <p class="peque">Support Center</p>
+                <p class="peque">Customer Support</p>
+                <p class="peque">About Us</p>
+                <p class="peque">Copy Right</p>
+            </div>
+            <div>
+                <p class="mediano">Product</p>
+                <p class="peque">Hoodies</p>
+                <p class="peque">Shirts</p>
+                <p class="peque">Sweatshirts</p>
+            </div>
+            <div>
+                <p class="mediano">Social</p>
+                <div>
+                    abc
+                </div>
             </div>
         </div>
-    </div>
     </footer>
-    <script type="module" src="main.js" ></script>
+    <script type="module" src="main.js"></script>
     <script type="module" src="lista.js"></script>
 </body>
 

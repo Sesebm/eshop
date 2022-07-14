@@ -7,6 +7,7 @@ const list = [
         , precio: 14.00
         , stock: 10
         , img: './featured1.png'
+        , cantidad: 0
     }
     , {
         id: 2
@@ -16,6 +17,7 @@ const list = [
         , precio: 24.00
         , stock: 15
         , img: './featured2.png'
+        , cantidad: 0
     }
     , {
         id: 3
@@ -25,6 +27,7 @@ const list = [
         , precio: 24.00
         , stock: 20
         , img: './featured3.png'
+        , cantidad: 0
     }
     
 ];

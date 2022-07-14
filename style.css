@@ -8,6 +8,7 @@
   --letras: black;
 
 }
+
 html [data-theme="light"] {
   --fondo: #F7F5F2;
   --barra: #DFDFDE;
@@ -22,6 +23,33 @@ html [data-theme="light"] {
   --secundario: #EEEEEE;
   --letras: white;
 }
+
+.load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 15;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.carritovacio{
+  position: relative;
+  margin: auto;
+  height: 60%;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+}
+.carromedio{
+  height: 80%;
+  width: 80%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: var(--letras);
@@ -76,8 +104,8 @@ body {
   display: block;
   position: fixed;
   height: 60px;
-  background-color: var(--barra);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+ background-color: var(--barra);
+ box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); 
   z-index: 5;
 }
 
@@ -122,12 +150,17 @@ body {
   font-size: 1.2rem;
   color: var(--letras);
 }
-.carro img{
+.carroimg{
   width: 30px;
   height: 30px;
+  fill : var(--primario);
  }
 
-
+ .oscuroimg{
+  width: 30px;
+  height: 30px;
+  fill : var(--primario);
+ }
 
 /*   Letras */
 .mini {
@@ -186,18 +219,39 @@ body {
 
 footer {
 
-  padding: 20px;
-
+  padding: 50px;
+  padding-top: 20px;
   background-color: var(--barra);
 }
 
 .foot {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
   gap: 20px;
 }
 
+.carrobottom{
+text-align: end;
+
+}
+.unidades{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+
+.carrobottom{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.btn_Sumar,.btn_Restar{
+ border: none;
+  border-radius: 50%;
+font-weight: 600;
+font-size: medium;
+padding: 0px;
+}
 
 .centerproducts {
   margin-top: 10%;
@@ -228,6 +282,29 @@ justify-content: center;
 }
 
 /* tarjetas */
+.productoscarro{  
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  position:relative;
+  margin: auto;
+  height: 120px;
+  width: 90%;
+   column-gap: 10px;
+   row-gap: 40px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+ 
+}
+
+.imagenCarro{
+  height: 100px;
+  width: 90%;
+  background-color: var(--primario);
+  border-radius: 3px;
+
+}
 
 .productosjs {
   height: 400px;
@@ -306,7 +383,8 @@ justify-content: center;
 }
 
 .btn_agregar:hover {
-  background-color: red;
+  background-color: var(--primario);
+  color: var(--letras);
 }
 
 .boton1 {
@@ -317,7 +395,14 @@ justify-content: center;
   border: 0px;
   cursor: pointer;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-weight: 600;
 }
+
+.fa-solid{
+  color: var(--letras);
+}
+
 
 .boton2 {
   width: 180px;
@@ -327,6 +412,9 @@ justify-content: center;
   border: 0px;
   cursor: pointer;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-size: 800;
+  color: white;
 }
 
 .buttoms_promo {
@@ -337,6 +425,31 @@ justify-content: center;
 }
 
 
+
+.cart {
+  position: fixed;
+  background-color: var(--barra);
+  z-index: 1;
+  width: 40%;
+  min-width: 500px;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  padding: 3.5rem 2rem;
+  transition: .4s;
+}
+.showcart{
+  right:0;
+}
+
+.carromedio{
+  text-align: center;
+}
+
+/* .coloreado{
+  background-color: var(--barra);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+} */
 
 @media (max-width:800px) {
 
@@ -387,6 +500,7 @@ justify-content: center;
 
   .grande {
     font-size: 18px;
+    font-weight: 900;
   }
 
 
@@ -407,6 +521,7 @@ justify-content: center;
     justify-content: space-between;
     align-items: center;
     height: 62px;
+
   }
 
   .navbar .menu-items {
@@ -433,7 +548,8 @@ justify-content: center;
     display: block;
     position: fixed;
     height: 60px;
-    background-color: var(--barra);
+  background-color: var(--barra);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   }
 
   .nav-container .checkbox {
@@ -561,4 +677,27 @@ justify-content: center;
 
 }
 
+.foot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 20px;
+}
+
+.cart {
+  position: fixed;
+  background-color: var(--barra);
+  z-index: 1;
+  width: 80%;
+  height: 100%;
+  min-width: 250px;
+  top: 0;
+  right: -100%;
+  padding: 3.5rem 2rem;
+  transition: .4s;
+}
+.showcart{
+  right:0;
+}
 }
