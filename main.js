@@ -184,10 +184,10 @@ document.addEventListener("click", function (event) {
 
             for (let i = 0; i < list.length; i++) {
                 if (list[i].id == event.target.dataset.id) {
-                    
+                    if (list[i].cantidad >= list[i].stock) { alert('No hay mas stock'); carrito[carrito.length - 1].cantidad = 0; return }
                     carrito.push(list[i]);
                     carrito[carrito.length - 1].cantidad = 1;
-                    if (list[i].cantidad >= list[i].stock) { alert('No hay mas stock'); carrito[carrito.length - 1].cantidad = 0; return }
+                    
                 }
             }
 
